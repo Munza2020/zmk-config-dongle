@@ -21,6 +21,7 @@
 include:
   - board: seeeduino_xiao_ble
     shield: kyria_rev3_dongle
+    snippet: zmk-usb-logging
 
   - board: nice_nano_v2
     shield: kyria_rev3_left
