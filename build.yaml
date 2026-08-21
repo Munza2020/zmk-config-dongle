@@ -24,10 +24,10 @@ include:
     snippet: zmk-usb-logging
 
   - board: nice_nano_v2
-    shield: kyria_rev3_left
+    shield: kyria_rev3_left nice_view_adapter nice_view
     cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
   - board: nice_nano_v2
-    shield: kyria_rev3_right
+    shield: kyria_rev3_right nice_view_adapter nice_view
     cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
 
   - board: seeeduino_xiao_ble
