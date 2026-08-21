@@ -5,14 +5,12 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 #define DEFAULT 0
 #define NAV 1
 #define SYM 2
 #define FUNCTION 3
-#define BLUETOOTH 4
 
 / {
     keymap {
@@ -23,12 +21,12 @@
             // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                                          |  Y   |  U    |  I    |  O   |   P   |   BSPC  |
             // |  LCTRL ESC  |  A  |  S  |  D   |  F   |  G   |                                          |  H   |  J    |  K    |  L   |   ;   |   '(CTRL)|
             // | LShift |  Z  |  X  |  C   |  V   |  B   | L BCKT | L SHIFT |  | LAYER 1 | R BCKT |  N   |  M    |  ,    |  .   |   /   | RSHIFT |
-            //                     | BT   | LGUI  | LALT RET  |  SPACE  |   NAV   |  |   SYM   |  SPACE  | AltGr  | RGUI  | Menu |
+            //                     | CapsWd| LGUI  | LALT RET  |  SPACE  |   NAV   |  |   SYM   |  SPACE  | AltGr  | RGUI  | Menu |
             bindings = <
             &kp TAB   &kp Q &kp W &kp E &kp R &kp T                                                  &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
             &mt LCTRL ESC &kp A &kp S &kp D &kp F &kp G                                               &kp H &kp J  &kp K     &kp L   &kp SEMI &mt RCTRL SQT
             &kp LSHIFT &kp Z &kp X &kp C &kp V &kp B &kp LBKT &kp CAPS            &mo FUNCTION &kp RBKT &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RSHIFT
-                                  &mo BLUETOOTH &kp LGUI &mt LALT RET &kp SPACE &mo NAV       &mo SYM &kp SPACE &kp RALT &kp RGUI &kp K_APP
+                                  &caps_word &kp LGUI &mt LALT RET &kp SPACE &mo NAV       &mo SYM &kp SPACE &kp RALT &kp RGUI &kp K_APP
             >;
         };
         layer1 {
@@ -69,19 +67,6 @@
           &trans &kp F1 &kp F2 &kp F3 &kp F4 &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans 
           &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
           >;
-        };
-        layer4 {
-            // ---------------------------------------------------------------------------------------------------------------------------------
-            // |       |      |BT_CLR|BTSEL0|BTSEL1|BTSEL2|                                         |      |      |      |      |      |      |
-            // |       |      |      |BTSEL3|BTSEL4|      |                                         |      |      |      |      |      |      |
-            // |       |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |
-            //                       |      |      |      |      |      |      |      |      |      |      |      |      |
-            bindings = <
-            &trans &trans &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2              &trans &trans &trans &trans &trans &trans
-            &trans &trans &trans     &bt BT_SEL 3 &bt BT_SEL 4 &trans                    &trans &trans &trans &trans &trans &trans
-            &trans &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans &trans
-                                 &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans
-            >;
         };
     };
 };
