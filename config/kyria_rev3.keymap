@@ -17,16 +17,13 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            // ---------------------------------------------------------------------------------------------------------------------------------
-            // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                                          |  Y   |  U    |  I    |  O   |   P   |   BSPC  |
             // |  LCTRL ESC  |  A  |  S  |  D   |  F   |  G   |                                          |  H   |  J    |  K    |  L   |   ;   |   '(CTRL)|
             // | LShift |  Z  |  X  |  C   |  V   |  B   | L BCKT | L SHIFT |  | LAYER 1 | R BCKT |  N   |  M    |  ,    |  .   |   /   | RSHIFT |
-            //                     | CapsWd| LGUI  | LALT RET  |  SPACE  |   NAV   |  |   SYM   |  SPACE  | AltGr  | RGUI  | Menu |
             bindings = <
             &kp TAB   &kp Q &kp W &kp E &kp R &kp T                                                  &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
             &mt LCTRL ESC &kp A &kp S &kp D &kp F &kp G                                               &kp H &kp J  &kp K     &kp L   &kp SEMI &mt RCTRL SQT
             &kp LSHIFT &kp Z &kp X &kp C &kp V &kp B &kp LBKT &kp CAPS            &mo FUNCTION &kp RBKT &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RSHIFT
-                                  &caps_word &kp LGUI &mt LALT RET &kp SPACE &mo NAV       &mo SYM &kp SPACE &kp RALT &kp RGUI &kp K_APP
+                                  &kp Z &kp LGUI &mt LALT RET &kp SPACE &mo NAV       &mo SYM &kp SPACE &kp RALT &kp RGUI &kp K_APP
             >;
         };
         layer1 {
